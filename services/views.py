@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3af458208b5fcf458cea2a1bff05bc547c75a07b4ab8ab556a4bb213b1749733
-size 513
+from django.shortcuts import render, get_object_or_404
+from .models import Service
+
+
+# Create your views here.
+def services(request):
+    all_services = Service.objects.all
+    return render(request, 'services.html', {'all_services': all_services})
+
+
+def service_details(request, service_title, service_id):
+    all_services = Service.objects.all
+    service = get_object_or_404(Service, pk=service_id)
+    return render(request, 'services.html', {'all_services': all_services, 'service': service})

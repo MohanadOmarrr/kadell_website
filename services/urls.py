@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b7c8ede39c6f030e6365253fc0db148fc0fd04464754024f932284c1e190dcd9
-size 376
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path
+from .views import services, service_details
+
+
+urlpatterns = [
+    path('', services, name='services'),
+    path('<str:service_title>/<int:service_id>', service_details, name='services_details')
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
