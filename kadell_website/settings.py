@@ -81,17 +81,17 @@ DATABASES = {
 
     'default': {
 
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
 
-        'NAME': 'kadelldb',
+        'NAME': 'kade_prod',
 
-        'USER': 'postgres',
+        'USER': 'kade_root',
 
-        'PASSWORD': 'mohanad124578',
+        'PASSWORD': '44password',
 
-        'HOST': 'localhost',
+        'HOST': '127.0.0.1',
 
-        'PORT': '5432',
+        'PORT': '3306',
 
     }
 
