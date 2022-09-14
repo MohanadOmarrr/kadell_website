@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:800e06c42a2393a3d45831929234e972a510894e1f7f4ced779e86e385183e0b
-size 421
+"""
+ASGI config for kadell_website project.
+
+It exposes the ASGI callable as a module-level variable named ``application``.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/4.1/howto/deployment/asgi/
+"""
+
+import os
+
+from django.core.asgi import get_asgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'kadell_website.settings')
+
+application = get_asgi_application()
+
