@@ -90,7 +90,7 @@ DATABASES = {
 
         'PASSWORD': '44password',
 
-        'HOST': '127.0.0.1',
+        'HOST': 'kadell-sa.com',
 
         'PORT': '3306',
 
