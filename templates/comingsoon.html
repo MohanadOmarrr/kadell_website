@@ -2,6 +2,7 @@
 
 <html lang="en">
 <head>
+{% load static %}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
@@ -12,26 +13,26 @@
 
 <!-- ICON -->
 
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="{% static 'images/' %}Kadell.png" type="image/x-icon">
 
 <!-- ICON -->
 
 <!-- title -->
 
-<title>:: Flexis ::</title>
+<title>Kadell</title>
 
 <!-- title -->
 
 <!-- Main style -->
 
-<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="{% static 'css/' %}style.css" rel="stylesheet" type="text/css">
 
 <!-- Main style -->
 
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="screen" >
-<link rel="stylesheet" href="css/jquery.fadeshow-0.1.1.min.css" type="text/css" media="screen" />
-<link href="css/responsive.css" rel="stylesheet" type="text/css" media="screen" >
+<link href="{% static 'css/' %}bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="{% static 'css/' %}font-awesome.min.css" rel="stylesheet" type="text/css" media="screen" >
+<link rel="stylesheet" href="{% static 'css/' %}jquery.fadeshow-0.1.1.min.css" type="text/css" media="screen" />
+<link href="{% static 'css/' %}responsive.css" rel="stylesheet" type="text/css" media="screen" >
 
 <!-- fonts -->
 
@@ -61,7 +62,7 @@
       
       <!-- logo -->
       
-      <figure class="logo-commingsoon"><img src="images/comming-soon-logo.png" alt=""/></figure>
+      <figure class="logo-commingsoon"><img src="{% static 'images/' %}Kadell.png" alt=""/></figure>
       
       <!-- logo --> 
       
@@ -118,7 +119,7 @@
         
         <!-- maintenance-home-wrapper -->
         
-        <footer> 
+        <footer>
           
           <!--Countdown -->
           
@@ -155,12 +156,12 @@
 <!-- Javascript File  --> 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script> 
-<script type="text/javascript" src="js/bootstrap.min.js"></script> 
-<script type="text/javascript" src="js/background.cycle.js"></script> 
-<script type="text/javascript" src="js/main-commingsoon.js"></script> 
-<script type="text/javascript" src="js/jquery.countdown.js"></script> 
-<script type="text/javascript" src="js/countdown-js.js"></script> 
-<script type="text/javascript" src="js/html5shiv.js"></script>
+<script type="text/javascript" src="{% static 'js/' %}jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="{% static 'js/' %}bootstrap.min.js"></script>
+<script type="text/javascript" src="{% static 'js/' %}background.cycle.js"></script>
+<script type="text/javascript" src="{% static 'js/' %}main-commingsoon.js"></script>
+<script type="text/javascript" src="{% static 'js/' %}jquery.countdown.js"></script>
+<script type="text/javascript" src="{% static 'js/' %}countdown-js.js"></script>
+<script type="text/javascript" src="{% static 'js/' %}html5shiv.js"></script>
 </body>
 </html>
