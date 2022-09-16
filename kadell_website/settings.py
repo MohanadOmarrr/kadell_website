@@ -31,6 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'home',
+    'services',
+    'about',
+    'contact',
+    'place',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -129,12 +134,6 @@ USE_TZ = True
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "kadell_website/static")
 ]
-#
-# STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-#
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 STATIC_URL = "http://kadell-sa.com/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
