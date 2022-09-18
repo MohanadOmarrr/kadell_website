@@ -82,17 +82,14 @@ DATABASES = {
 
     'default': {
 
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'kade_prod',
+        'NAME': 'kadelldb',
 
-        'USER': 'kade_root',
+        'USER': 'postgres',
 
-        'PASSWORD': '44password',
+        'PASSWORD': '#Mohanad124578',
 
-        'HOST': '127.0.0.1',
-
-        'PORT': '3306',
 
     }
 
@@ -141,8 +138,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, "staticfiles"),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
