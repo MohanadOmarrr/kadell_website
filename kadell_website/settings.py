@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-y=j0s8blihao382rdox8yfrnld#@s7!&^=g2qg9h!v4ms62fl(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.kadell-sa.com', 'kadell-sa.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -132,7 +132,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 STATICFILES_DIRS = [
-    '/home/kadell-sa.com/public_html/kadell_website/kadell_website/static',
     os.path.join(BASE_DIR, "kadell_website/static"),
     os.path.join(BASE_DIR, "place/static")
 ]
