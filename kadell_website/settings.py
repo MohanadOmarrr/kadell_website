@@ -81,7 +81,7 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql',
 
-        'NAME': 'kadelldb',
+        'NAME': 'postgres',
 
         'USER': 'postgres',
 
