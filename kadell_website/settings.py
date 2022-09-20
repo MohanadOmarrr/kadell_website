@@ -81,22 +81,11 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql',
 
-        'NAME': 'postgres',
+        'NAME': 'kadelldb',
 
         'USER': 'postgres',
 
         'PASSWORD': '#Mohanad124578',
-
-<<<<<<< HEAD
-        'HOST': 'localhost',
-
-        'PORT': '5432'
-
-=======
-	'HOST': 'localhost',
-
-	'PORT': '5432',
->>>>>>> 75bb6a80799675259c4034f250eb35c04c86eb42
 
     }
 
