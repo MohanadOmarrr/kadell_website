@@ -114,7 +114,7 @@
 
 <!--// All services //-->
 
-<div class="all-serivices">git
+<div class="all-serivices">
   <div class="container">
     <div class="row">
       {% for service in all_services %}
@@ -122,7 +122,7 @@
           <div class="col-md-4 co-sm-6">
             <section>
               <span>
-                <img src="{{ service.icon.url }}"/>
+                <img src="{% static 'images/services-icon.png' %}"/>
               </span>
               <h3>{{ service.title }}</h3>
             </section>
