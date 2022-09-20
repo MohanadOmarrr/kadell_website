@@ -164,7 +164,7 @@ display:block
 }
  .header nav ul {
  width:100%;
- background-color:#000;
+ background-color: #0a5134;
  left:0;
  right:0;
  margin:0 auto;
@@ -421,7 +421,7 @@ width:100% !important
  text-align:center
 }
  .header .inner-nva-wrapper {
- background-color:#000;
+ background-color: transparent;
  top:-91px;
  padding-bottom:10px
 }
