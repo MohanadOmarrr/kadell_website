@@ -68,8 +68,8 @@
   <!--// navbar //-->
   
   <div class="navbar  navbar-static-top inner-nva-wrapper">
-    <div class="container"> 
-      
+    <div class="container">
+
       <!-- Logo -->
       <h1> <a href="{% url 'home' %}" title="Kadell" > <img src="{% static 'images/Kadell.png' %}" alt="" title="Kadell" class="logo"/> <img src="{% static 'images/Kadell.png' %}" alt="" title="Kadell" class="logo_hove"/> </a> </h1>
       
@@ -98,7 +98,7 @@
   <!-- // banner Inner //-->
   
   <div class="header_inner_banner">
-    <figure> <img src="{% static 'images/service-banner.png' %}" alt=""/> </figure>
+    <figure> <img src="{% static 'images/service-banner.png' %}" alt="" style="height:100%; top:0;"/> </figure>
     <div class="header-title">
       <h2>Service</h2>
       <p>what we offer to customer</p>
@@ -166,27 +166,42 @@
   <div class="row">
     <div class="services-text">
       <div class="col-md-8 col-sm-6">
-        <img src="{{ service.icon.url }}" />
+        <img src="{% static 'images/services-icon.png' %}" />
         <br>
         <article>
           <h2>{{ service.title }}</h2>
           <br>
+          <!--<div class="col-lg-4 col-md-4 col-xs-12">
+           <figure> <img src="{{ service.image.url }}" alt="" align="left"/> </figure>
+          </div>-->
           <p>{{ service.body }}</p>
         </article>
         <br>
         <br>
         <h4>{{ service.title }} services</h4>
         <br>
-        <div class="container service-products-list">
+        <br>
+        <div class="container">
+          <div class="row" align="center">
+            <div class="col-lg-6" style="padding-left: 0px;">
+            {% for product in service.products_list %}
+              <div class="col-lg-4 col-md-4 col-xs-6" style="padding-left: 0px;">
+                <img src="{% static 'images/test3.jpg' %}" width="150px" height="150px">
+                <p>{{ product }}</p>
+                <p> AUD {{ service.price }}</p>
+                <br>
+              </div>
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+        <!--<div class="container service-products-list">
           <ul style="font-weight: 300; font-size: 15px; line-height: 23px; padding-bottom: 23px;">
             {% for product in service.products_list %}
             <li>{{ product }}</li>
             {% endfor %}
           </ul>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-2">
-        <figure> <img src="{{ service.image.url }}" alt=""/> </figure>
+        </div>-->
       </div>
     </div>
     <div class="clearfix"></div>

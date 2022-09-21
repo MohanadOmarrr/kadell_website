@@ -421,7 +421,7 @@ width:100% !important
  text-align:center
 }
  .header .inner-nva-wrapper {
- background-color: transparent;
+ background-color: #aac4d2;
  top:-91px;
  padding-bottom:10px
 }
@@ -467,6 +467,9 @@ width:100%;
 max-width:100%;
 margin:0 auto;
 display:block
+}
+ body > div.container.services-area-home > div > div.col-md-8.col-sm-12.service_details > h6 {
+text-align: center;
 }
 }
 
