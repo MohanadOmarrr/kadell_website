@@ -169,7 +169,7 @@
         <img src="{% static 'images/services-icon.png' %}" />
         <br>
         <article>
-          <h2>{{ service.title }}</h2>
+          <h2>{{ service.services.title }}</h2>
           <br>
           <!--<div class="col-lg-4 col-md-4 col-xs-12">
            <figure> <img src="{{ service.image.url }}" alt="" align="left"/> </figure>
@@ -184,11 +184,11 @@
         <div class="container">
           <div class="row" align="center">
             <div class="col-lg-6" style="padding-left: 0px;">
-            {% for product in service.products_list %}
+            {% for product in all_products %}
               <div class="col-lg-4 col-md-4 col-xs-6" style="padding-left: 0px;">
-                <img src="{% static 'images/test3.jpg' %}" width="150px" height="150px">
-                <p>{{ product }}</p>
-                <p> AUD {{ service.price }}</p>
+                <img src="{{ product.image.url }}" width="150px" height="150px">
+                <p>{{ product.title }}</p>
+                <p> AUD {{ product.price }}</p>
                 <br>
               </div>
             {% endfor %}
