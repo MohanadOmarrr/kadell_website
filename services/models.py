@@ -21,6 +21,7 @@ class Service(models.Model):
 
 
 class ServicesProducts(models.Model):
+    id = models.IntegerField(primary_key=True)
     title = models.CharField(max_length=100, default='m')
     image = models.ImageField(upload_to='images/', default=0)
     price = models.IntegerField(default=0)
