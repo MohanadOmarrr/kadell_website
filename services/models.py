@@ -20,7 +20,7 @@ class Service(models.Model):
         return self.title
 
 
-class ServicesProducts(models.Model):
+class Products(models.Model):
     title = models.CharField(max_length=100, default='m')
     image = models.ImageField(upload_to='images/', default=0)
     price = models.IntegerField(default=0)
