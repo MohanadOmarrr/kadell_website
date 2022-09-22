@@ -24,7 +24,8 @@ class ServicesProducts(models.Model):
     title = models.CharField(max_length=100, default='m')
     image = models.ImageField(upload_to='images/', default=0)
     price = models.IntegerField(default=0)
-    Product = models.ManyToManyField(Service)
+    Product = models.ManyToManyField(to=Service)
 
     def __str__(self):
         return self.title
+
