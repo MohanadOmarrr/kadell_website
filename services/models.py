@@ -6,7 +6,10 @@ class Service(models.Model):
     title = models.CharField(max_length=100, default=0)
     body = models.TextField(max_length=1000, null=True, blank=True, default=0)
     image = models.ImageField(upload_to='images/', default=0)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 231801c6ca5051aecd678b9a5fad942da68aa067
     def products_list(self):
         return self.products.split(',')
 
