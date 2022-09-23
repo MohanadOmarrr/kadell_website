@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bcbbb42f-4e67-4c78-9490-53df67d224c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kadell_website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/kadell_website/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/migrations/0002_service_icon.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/services/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
