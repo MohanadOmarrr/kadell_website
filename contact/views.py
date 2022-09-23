@@ -1,4 +1,5 @@
 from .models import Session
+from datetime import datetime
 from .forms import ContactForm
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
@@ -8,6 +9,8 @@ from django.utils.datastructures import MultiValueDictKeyError
 # Create your views here.
 @csrf_exempt
 def contact(request):
+    date = str(datetime.now().strftime("%Y-%m-%d"))
+    print(date)
     if request.method == 'POST':
         if request.POST['name'] and request.POST['email'] and request.POST['phone'] and request.POST['service'] and request.POST['date'] and request.POST['time']:
             same_date = Session.objects.filter(date=request.POST['date'])
@@ -25,4 +28,4 @@ def contact(request):
             new_session.save()
             return render(request, 'contact.html', {'success': 'Congratulations, Your session was booked successfully.'})
     else:
-        return render(request, 'contact.html')
+        return render(request, 'contact.html', {'date': date})

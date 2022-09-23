@@ -26,6 +26,7 @@
 <!-- Main style -->
 
 <link href="{% static 'css/' %}style.css" rel="stylesheet" type="text/css">
+<link href="{% static 'contact-css/' %}style.css" rel="stylesheet" type="text/css">
 
 <!-- Main style -->
 
@@ -149,11 +150,11 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6">
-              <input name="date" class="form-control" type="date" id="date" data-dashlane-rid="f6af74c3f2514b0b" data-form-type="" style="width:93%;" required>
+            <div class="col-lg-6 col-md-6 col-xs-6">
+              <input name="date" value="{{ date }}" class="form-control" type="date" id="date" data-dashlane-rid="f6af74c3f2514b0b" data-form-type="" style="width:93%;" required>
             </div>
-            <div class="col-md-6">
-              <input name="time" class="form-control" type="time" id="time" data-dashlane-rid="f6af74c3f2514b0b" data-form-type="" style="width:93%;" required>
+            <div class="col-lg-6 col-md-6 col-xs-6">
+              <input name="time" value="12:00" class="form-control" type="time" id="time" data-dashlane-rid="f6af74c3f2514b0b" data-form-type="" style="width:93%;" required>
             </div>
           </div>
           <div class="row">
