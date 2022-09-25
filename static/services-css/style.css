@@ -1,11 +1,16 @@
-h6 {
-    font-family: Bonky Serif;
-    font-size: 15px;
-    line-height: 18px;
-    padding-bottom: 5px;
-    font-weight: bold;
+@media (max-width: 767px) {
+    #service_products .product {
+        height: 200px;
+    }
 }
 
-#service_products .product h6 {
-    color: green;
+
+h6 {
+    font-family: Bonky Serif;
+    font-size: 18px;
+    line-height: 18px;
+    width: 90%;
+    font-weight: normal;
+    padding-bottom: 5px;
+    color: black;
 }
