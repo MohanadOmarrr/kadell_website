@@ -1,12 +1,17 @@
-.header nav ul > li > a {
-    color: black;
-}
-
 @media (max-width: 767px) {
     .header .inner-nva-wrapper {
         top: -30px;
     }
 }
+
+
+.header nav #menu-button span {
+    background: black;
+}
+
+/*.header nav ul > li > a {
+    color: black;
+}*/
 
 .carousel {
     margin-top: 15%;

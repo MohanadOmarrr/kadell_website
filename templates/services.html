@@ -26,7 +26,6 @@
 <!-- Main style -->
 
 <link href="{% static 'css/' %}style.css" rel="stylesheet" type="text/css">
-<link href="{% static 'services-css/style.css' %}" rel="stylesheet" type="text/css">
 
 <!-- Main style -->
 
@@ -36,6 +35,8 @@
 <link href="{% static 'css/' %}jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" >
 <link href="{% static 'css/' %}owl.carousel.css" rel="stylesheet" type="text/css" media="screen" >
 <link href="{% static 'css/' %}animate.min.css" rel="stylesheet" type="text/css" media="screen" >
+
+<link href="{% static 'services-css/style.css' %}" rel="stylesheet" type="text/css">
 
 <!--  add color theme -->
 
@@ -187,7 +188,6 @@
             <div id="service_products" class="col-lg-6" style="padding-left: 0px;">
             {% for product in service_products %}
               <div class="col-lg-4 col-md-4 col-xs-6" style="padding-left: 0px;">
-                <br>
                 <img src="{{ product.image.url }}" width="175px" height="150px">
                 <br>
                 <h6>{{ product.title }}</h6>
