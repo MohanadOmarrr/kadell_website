@@ -1,7 +1,11 @@
 h6 {
     font-family: Bonky Serif;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 18px;
     padding-bottom: 5px;
     font-weight: bold;
+}
+
+#service_products .product h6 {
+    color: green;
 }
