@@ -1,6 +1,11 @@
 @media (max-width: 767px) {
     #service_products .product {
         height: 210px;
+        width: 50%;
+    }
+
+    .col-xs-12 {
+        width: 109%;
     }
 }
 
