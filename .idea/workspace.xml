@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="bcbbb42f-4e67-4c78-9490-53df67d224c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kadell_website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/kadell_website/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/place-css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/place-css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/services.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
