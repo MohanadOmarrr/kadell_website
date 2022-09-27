@@ -159,10 +159,6 @@ display:block
 /* xs */
 
 @media (max-width: 767px) {
- #kadell-video {
-    width: 300px;
-    height: 180px;
- }
  .header nav {
  float:none
 }
