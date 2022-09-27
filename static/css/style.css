@@ -2617,3 +2617,9 @@ body > div.all-serivices > div > div > a > div > section > span > img{
     background-color: #0a5134;
     color: white;
 }
+
+
+#kadell-video {
+    width: 640px;
+    height: 480px;
+}
