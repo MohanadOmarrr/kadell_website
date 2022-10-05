@@ -2231,7 +2231,7 @@ body > div.the-history.container > div {
 	transition-duration: 0.6s;
 	transition-property: all;
 	transition-timing-function: ease;
-	margin-top: 40px
+	margin: 40px 0;
 }
 
 #cform > input[type=submit]:nth-child(6):hover {
