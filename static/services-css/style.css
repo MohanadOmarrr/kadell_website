@@ -1,6 +1,6 @@
 @media (max-width: 767px) {
     #service_products .product {
-        height: 210px;
+        height: 260px;
         width: 50%;
     }
 
@@ -18,14 +18,4 @@ h6 {
     font-weight: normal;
     padding-bottom: 5px;
     color: black;
-}
-
-.service-products-btn {
-    font-size: 17px;
-    line-height: 49px;
-    display: inline-block;
-    text-transform: uppercase;
-    color: #FFF;
-    padding: 0 10px;
-    background-color: #0a5134;
 }
