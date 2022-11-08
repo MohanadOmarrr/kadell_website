@@ -499,7 +499,7 @@ h6 {
 	z-index: 60;
 	height: 3px;
 	width: 100%;
-	background: black;
+	background: #fff;
 	opacity: 1;
 	left: 0;
 	-webkit-transform: rotate(0deg);
@@ -1625,7 +1625,6 @@ body > div.the-history.container > div {
 	font-size: 15px;
 	line-height: 23px;
 	color: #555;
-
 	font-weight: 300
 }
 .all-serivices section span {
@@ -1654,14 +1653,14 @@ body > div.the-history.container > div {
 }
 
 .services-text a {
-    font-size: 17px;
-    line-height: 49px;
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 30px;
     display: inline-block;
     text-transform: uppercase;
     color: #FFF;
     padding: 0 10px;
     background-color: #0a5134;
-    margin-top: 47px;
 }
 
 .services-text a:hover {
@@ -2231,7 +2230,7 @@ body > div.the-history.container > div {
 	transition-duration: 0.6s;
 	transition-property: all;
 	transition-timing-function: ease;
-	margin: 40px 0;
+	margin-top: 40px
 }
 
 #cform > input[type=submit]:nth-child(6):hover {
@@ -2616,10 +2615,4 @@ body > div.all-serivices > div > div > a > div > section > span > img{
 #cform > input[type=submit]:nth-child(7):hover {
     background-color: #0a5134;
     color: white;
-}
-
-
-#kadell-video {
-    width: 80%;
-    height: 58%;
 }

@@ -19,3 +19,13 @@ h6 {
     padding-bottom: 5px;
     color: black;
 }
+
+.service-products-btn {
+    font-size: 17px;
+    line-height: 49px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #FFF;
+    padding: 0 10px;
+    background-color: #0a5134;
+}
