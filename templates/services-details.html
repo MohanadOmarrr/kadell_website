@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 {% load static %}
@@ -19,7 +18,7 @@
 
 <!-- title -->
 
-<title>Kadell |  Cart</title>
+<title>Kadell</title>
 
 <!-- title -->
 
@@ -35,8 +34,6 @@
 <link href="{% static 'css/jquery.fancybox.css' %}" rel="stylesheet" type="text/css" media="screen" >
 <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet" type="text/css" media="screen" >
 <link href="{% static 'css/animate.min.css' %}" rel="stylesheet" type="text/css" media="screen" >
-
-<link href="{% static 'cart-static/style.css' %}" rel="stylesheet" type="text/css">
 
 <!--  add color theme -->
 
@@ -67,15 +64,14 @@
 
 <!-- // header Start // -->
 
-<header class="header">
+<header class="home header">
 
   <!--// navbar //-->
 
-  <div class="navbar  navbar-static-top inner-nva-wrapper">
+  <div class="navbar  navbar-static-top">
     <div class="container">
 
-      <!-- Logo -->
-      <h1> <a href="{% url 'home' %}" title="Kadell" > <img src="{% static 'images/Kadell.png' %}" alt="" title="Kadell" class="logo"/> <img src="{% static 'images/' %}Kadell.png" alt="" title="Flexis" class="logo_hove"/> </a> </h1>
+      <!-- Logo --> <h1> <a href="{% url 'home' %}" title="Kadell" > <img src="{% static 'images/Kadell.png' %}" alt="" title="Kadell" class="logo"/> <img src="{% static 'images/Kadell.png' %}" alt="" title="Kadell" class="logo_hove"/> </a> </h1>
 
       <!-- Logo -->
 
@@ -86,7 +82,7 @@
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'services' %}">Services</a></li>
-          <li><a href="{% url 'place' %}">Place</a></li>
+          <li><a href="{% url 'place' %}">Location</a></li>
           <li><a href="{% url 'blog' %}">Blog</a></li>
           <li><a href="{% url 'contact' %}">Contact</a></li>
           <li><a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -100,101 +96,78 @@
 
   <!--// navbar //-->
 
- <section class="h-100 products-section" style="background-color: #fff; padding: 130px;">
-  <div class="container h-100 py-5">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-10">
+  <!-- // banner Inner //-->
 
-        <div class="d-flex justify-content-between align-items-center mb-4">
-          <h3 class="fw-normal mb-0 text-black">Your Cart</h3>
+  <div class="header_inner_banner">
+    <figure> <img src="{{ services.banner.url }}" alt="" style="height:100%; top:0;"/> </figure>
+    <div class="header-title">
+      <h2>{{ service.title }}</h2>
+    </div>
+  </div>
+
+  <!-- // banner Inner //-->
+
+</header>
+
+<!-- // header End // -->
+
+<div class="container">
+  <div class="row">
+    <div class="services-text">
+      <div class="col-lg-12 col-md-8 col-sm-6">
+        <br>
+        <article>
+          <h2>{{ service.title }}</h2>
           <br>
+          <p>{{ service.body }}</p>
+        </article>
+        <br>
+        <br>
+        <div class="advgb-column-inner" style="border-style:none;border-width:1px">
+          <h2 class="has-text-align-center service-line-header">{{ service.title }} services</h2>
         </div>
+        <br>
+        <br>
+        <div class="container">
+          <div class="row" align="center">
+            <div id="service_products" class="col-lg-12 col-xs-12" style="padding-left: 0px;">
+            {% for product in service_products %}
+              <div class="product col-lg-6 col-md-4 col-xs-6" style="padding-left: 0px;">
+                <div class="row">
+                  <div class="col-lg-5">
+                    <h6>{{ product.title }}</h6>
+                    <br>
+                    <p> SAR {{ product.prices }}</p>
+                  </div>
 
-        {% if error %}
-          <h6>{{ error }}</h6>
-        {% endif %}
+                  <div class="col-lg-2"></div>
 
-        {% for item in all_cart_items %}
-        <div class="card rounded-3 mb-4" style="margin: 30px 0">
-          <div class="card-body p-4">
-            <div class="row d-flex justify-content-between align-items-center">
-              <div class="col-md-2 col-lg-2 col-xl-2">
-                <img
-                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
-                  class="img-fluid rounded-3" alt="Cotton T-shirt">
+                  <div class="col-lg-5">
+                    <a href="{% url 'add_to_cart' product.id %}" class="service-products-btn">add to cart</a>
+                  </div>
+                </div>
+<!--                <br>-->
+<!--                <h6>{{ product.title }}</h6>-->
+<!--                <br>-->
+<!--                <p> SAR {{ product.prices }}</p>-->
+<!--                <a href="{% url 'add_to_cart' product.id %}" class="service-products-btn">add to cart</a>-->
+<!--                <br>-->
+<!--                <br>-->
+                <hr>
               </div>
-              <div class="col-md-3 col-lg-3 col-xl-3" style="padding-top: 4.3rem;">
-                <p class="lead fw-normal mb-2">{{ item.title }}</p>
-              </div>
-<!--              <div class="col-md-3 col-lg-3 col-xl-2 d-flex" style="padding-top: 2rem; padding-right: 4rem; ">-->
-<!--                <button class="btn btn-link px-2"-->
-<!--                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-->
-<!--                  <i class="fas fa-minus"></i>-->
-<!--                </button>-->
-
-<!--                <input id="form1" min="0" name="quantity" value="2" type="number"-->
-<!--                  class="form-control form-control-sm" />-->
-
-<!--                <button class="btn btn-link px-2"-->
-<!--                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">-->
-<!--                  <i class="fas fa-plus"></i>-->
-<!--                </button>-->
-<!--              </div>-->
-              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1" style="padding-top: 4.5rem; ">
-                <h5 class="mb-0">SAR {{ item.prices }}</h5>
-              </div>
-              <div class="col-md-1 col-lg-1 col-xl-1 text-end" style="padding-top: 4.5rem; ">
-                <a href="{% url 'delete_item' item.id %}" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
-              </div>
+            {% endfor %}
             </div>
           </div>
         </div>
-        {% endfor %}
-
-        <br>
-        <br>
-
-        <div class="card">
-          <div class="card-body">
-            <a href="https://tamara.co/en/index.html" target="_blank"><button type="button" class="btn btn-warning btn-block btn-lg" style="background-color: #0a5134; border: none;">Pay with Tamara</button></a>
-          </div>
-        </div>
-
+      </div>
+    </div>>
       </div>
     </div>
-  </div>
-</section>
-
-<!--  &lt;!&ndash; // banner Inner //-->
-<!--  -->
-<!--  <div class="header_inner_banner">-->
-<!--    <figure> <img src="{% static 'images/test.jpg' %}" alt=""/> </figure>-->
-<!--    <div class="header-title">-->
-<!--      <h2>place</h2>-->
-<!--      <p>showcase of latest works</p>-->
-<!--    </div>-->
-<!--    <div class="bg_overlay"></div>-->
-<!--  </div>-->
-<!--  -->
-<!--   // banner Inner // -->
-<!--  -->
-<!--</header>-->
-
-<!-- // header End //  -->
-
-<!--// Works //-->
-
-<!--<div class="works_wrapper">-->
-
-<!--  -->
-
-<!--</div>-->
-
-<!--// Works //&ndash;&gt;-->
+    <div class="clearfix"></div>
 
 <!-- Let's start a project  -->
 
-<!--<div class="letsproject-pan"> <a href="#">Let's start a project </a> </div>-->
+<div class="letsproject-pan"> <a href="{% url 'contact' %}">Let's start our journey </a> </div>
 
 <!-- Let's start a project  -->
 
@@ -216,7 +189,7 @@
           <li><a href="{% url 'services' %}" title="Services">Services</a></li>
           <li><a href="{% url 'blog' %}" title="Blog">Blog</a></li>
           <li><a href="{% url 'contact' %}" title="Contact">Contact</a></li>
-          <li><a href="{% url 'place' %}" title="Place">Place</a></li>
+          <li><a href="{% url 'place' %}" title="Place">Location</a></li>
         </ul>
       </div>
       <div  class="col-md-3 col-sm-3 col-xs-6">
@@ -240,9 +213,7 @@
 
 <!-- Javascript File  -->
 
-<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
-
-<script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
 

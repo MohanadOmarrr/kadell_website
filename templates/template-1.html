@@ -82,7 +82,7 @@
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'services' %}">Services</a></li>
-          <li><a href="{% url 'place' %}">Place</a></li>
+          <li><a href="{% url 'place' %}">Location</a></li>
           <li><a href="{% url 'blog' %}">Blog</a></li>
           <li><a href="{% url 'contact' %}">Contact</a></li>
           <li><a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -108,7 +108,7 @@
           <figure> <img src="{% static 'images/home-main-banner-1.jpg' %}" alt="image01">
             <figcaption>
               <h2>Kadell</h2>
-              <p>Design Studio from Paris</p>
+              <p>Revive. Restore</p>
             </figcaption>
           </figure>
           <i class="angle-down"></i>
@@ -122,8 +122,8 @@
         <div class="slide">
           <figure> <img src="{% static 'images/home-main-banner-2.jpg' %}" alt="image02">
             <figcaption>
-              <h2>Clean&amp;Minimal</h2>
-              <p>We Build Creative, Simple, MInimal Designs</p>
+              <h2>Kadell</h2>
+              <p>Revive. Restore</p>
             </figcaption>
           </figure>
           <i class="angle-down"></i>
@@ -159,13 +159,12 @@
     
     <!-- Service Details -->
 
-    <div class="col-md-8 col-sm-12 service_details">
-      <h6>#KadellCares</h6>
+    <div class="col-lg-12 col-md-8 col-sm-12 service_details">
+      <h6>Kadell Cares</h6>
       <br>
       <br>
       <p>The only definition of beauty that matters and won’t change because of some beauty trend is the one that lies within you and that’s how you feel about yourself.</p>
-      <p>Beauty grooming self-care has intersected psychologically & has been proven to help with mental health and over all well being.  little things like putting on some make up or fixing your hair or nails can give you a boost in your confidence.</p>
-      <p>So remember, No one in the world has to love you more than you should love yourself!</p>
+      <p>Beauty grooming self-care has intersected psychologically & has been proven to help with mental health and over all well being.  little things like putting on some make up or fixing your hair or nails can give you a boost in your confidence. So remember, No one in the world has to love you more than you should love yourself!</p>
       <a href="{% url 'services' %}" class="button-service">Service Details</a> </div>
     
     <!-- Service Details --> 
@@ -200,7 +199,7 @@
 <!--// Fun-facts //-->
 
 <div>
-  <img src="{% static 'images/home-mid-banner.png' %}"/>
+  <img src="{% static 'images/home-mid-banner.jpg' %}"/>
 </div>
 <!--<div class="fun-facts" data-parallax="scroll" data-bleed="10" data-speed="0.7" data-image-src="{% static 'images/home_mid_banner.png' %}">-->
 <!--  <div class="container">-->
@@ -317,19 +316,17 @@
 <!-- // testimonial //-->
 
 <div class="testimonial_pan text-center">
+  <h6>Kadell Masters</h6>
+  <br>
+  <br>
   <div id="testimonial" class=" container owl-carousel">
     <article class="item">
-      <p>Duis facilisis, ante ac imperdiet hendrerit, metus nisi eleifend nulla, et pretium nisl quam et leo<br/>
-        In sem ligula, molestie ac interdum identum non, ornare in nulla. </p>
-      <h6>Jessie Pinkman  |  MDM Inc.</h6>
+      <p>I look forward to making you the best in the world with my many years of experience and knowledge. <br>By conveying all the techniques I know and created in the academy in the most accurate way, we are walking to the top in your career together. <br>These workshops, where you will see many techniques together, will ensure that you are always one step ahead. <br>I and my team are always there for you to progress successfully and bring your career to the top.</p>
+      <h6>SİNAN İSLAM YILMAZ |  Grand Master.</h6>
     </article>
     <article class="item">
       <p>Phasellus non dolor nibh. Nullam elementum tellus pretium feugiat. Cras dictum tellus dui,<br/>vitae sollicitudin ipsum tincidunt in. </p>
       <h6>Johnathan doe  |  Matrix media ltd</h6>
-    </article>
-    <article class="item">
-      <p>Cras dictum tellus dui, vitae sollicitudin ipsum tincidunt in. Sed tincidunt tristique enim sed sollcitudin.<br/>Phasellus non dolor nibh. Nullam elementum tellus pretium feugiat. </p>
-      <h6>Johnathan  |  Lexind media ltd</h6>
     </article>
   </div>
 </div>
@@ -377,7 +374,7 @@
           <li><a href="{% url 'services' %}" title="Services">Services</a></li>
           <li><a href="{% url 'blog' %}" title="Blog">Blog</a></li>
           <li><a href="{% url 'contact' %}" title="Contact">Contact</a></li>
-          <li><a href="{% url 'place' %}" title="Place">Place</a></li>
+          <li><a href="{% url 'place' %}" title="Place">Location</a></li>
         </ul>
       </div>
       <div  class="col-md-3 col-sm-3 col-xs-6">
@@ -389,6 +386,10 @@
         </ul>
       </div>
       <p>&copy; 2022 Kadell.com. All Rights Reserved.</p>
+      <br>
+      <img src="{% static 'images/tamara-logo.png' %}" width="5%" height="5%">
+      <br>
+      <img src="{% static 'images/Tamara_Logo-EN.png' %}" width="5%" height="5%">
     </div>
   </div>
 </footer>

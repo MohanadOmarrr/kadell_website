@@ -34,7 +34,7 @@
 
 
 
-  
+
 
 
 
@@ -90,7 +90,7 @@
 
 
 
-	13. About Pan 
+	13. About Pan
 
 
 
@@ -141,7 +141,7 @@
 
 
 
-   ======= 1. Body style ======== 
+   ======= 1. Body style ========
 
 
 
@@ -654,7 +654,7 @@ h6 {
 	display: inline-block;
 	text-transform: uppercase;
 	color: #FFF;
-	width: 178px;
+	width: 226px;
 	background-color: #0a5134;
 	margin-top: 47px
 }
@@ -664,6 +664,14 @@ h6 {
 
 body > div.about_pan_home > div > a:hover{
     background-color: #aac4d2;
+}
+
+body > div.container > p {
+    font-size: 15px;
+    line-height: 27px;
+    color: #555;
+    font-weight: 300;
+    padding-bottom: 26px;
 }
 
 /* ===========================
@@ -678,6 +686,7 @@ body > div.about_pan_home > div > a:hover{
 
 .services-area-home {
 	padding-top: 105px;
+	text-align: center;
 }
 
 body > div.container.services-area-home > div > div.col-md-8.col-sm-12.service_details > h6 {
@@ -703,6 +712,15 @@ body > div.container.services-area-home > div > div.col-md-8.col-sm-12.service_d
 	padding-bottom: 35px;
 	color: #555;
 }
+
+body > div.testimonial_pan.text-center > h6 {
+    font-size: 25px;
+    line-height: 15px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #000;
+}
+
 .service_details .button-service {
 	display: inline-block;
 	font-size: 17px;
@@ -978,7 +996,6 @@ body > div.container.services-area-home > div > div.col-md-8.col-sm-12.service_d
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 24px;
-	letter-spacing:2px;
 	padding-bottom: 30px
 }
 .testimonial_pan article h6 {
@@ -1649,7 +1666,8 @@ body > div.the-history.container > div {
 .services-text {
 	overflow: hidden;
 	padding-top: 92px;
-	padding-bottom: 50px
+	padding-bottom: 50px;
+	text-align: center;
 }
 
 .services-text a {
@@ -1661,6 +1679,37 @@ body > div.the-history.container > div {
     color: #FFF;
     padding: 0 10px;
     background-color: #0a5134;
+}
+
+.advgb-column-inner {
+    position: relative
+}
+
+.advgb-column-inner:before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: #0a5134;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 0;
+}
+
+.service-line-header {
+    background: #fff;
+    z-index: 9;
+    position: relative;
+    width: auto;
+    max-width: max-content;
+    margin: auto;
+    padding: 0 10px;
+    font-family: Bonky Serif;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 800;
+    color: black;
 }
 
 .services-text a:hover {
@@ -1680,12 +1729,20 @@ body > div.the-history.container > div {
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 23px;
-
 	padding-bottom: 23px
 }
 .services-text figure {
 	float: right
 }
+
+.product {
+    text-align: left;
+}
+
+#service_products hr {
+    background-color: #0a5134
+}
+
 .area-expertise {
 	padding-bottom: 110px;
 	overflow: hidden

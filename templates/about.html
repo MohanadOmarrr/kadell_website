@@ -84,7 +84,7 @@
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'services' %}">Services</a></li>
-          <li><a href="{% url 'place' %}">Place</a></li>
+          <li><a href="{% url 'place' %}">Location</a></li>
           <li><a href="{% url 'blog' %}">Blog</a></li>
           <li><a href="{% url 'contact' %}">Contact</a></li>
           <li><a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -101,7 +101,7 @@
   <!-- // banner Inner //-->
   
   <div class="header_inner_banner">
-    <figure> <img src="{% static 'images/about-banner.png' %}" alt=""/> </figure>
+    <figure> <img src="{% static 'images/about-banner.jpg' %}" alt=""/> </figure>
     <div class="header-title">
       <h2>About us</h2>
       <p>Short intro about Kadell</p>
@@ -132,9 +132,8 @@
     <div class="col-md-7 col-xs-10">
       <article>
         <h6>About Us</h6>
-        <p>Kadell meaning gift of god, Kadell was created keeping in mind greatest gift god has given us. Kadell isn’t just another salon. It’s a safe heaven where women are welcome to embrace their beauty and flaws.</p>
-        <p>We are living in the world where everything is perfected, and the truth is perfect doesn’t exist. We in Kadell help you to reach the best version of you, we want women to leave our salon with a better version of their true selves, believing that beauty starts from within, so let’s free ourselves from all the stereotypes and learn to love ourselves truly and fully.</p>
-        <p>We in Kadell help you to reach the best version of you, we want women to leave our salon with a better version of their true selves, we in Kadell truly believe that beauty starts within, so let’s free ourselves from all the stereotypes and learn to love ourselves truly and fully</p>
+        <p>Kadell means gift of god, Kadell was created keeping in mind greatest gift god has given us. Kadell isn’t just another salon. It’s a safe heaven where women are welcome to embrace their beauty and flaws.</p>
+        <p>We are living in the world where everything is perfected, and the truth is perfect doesn’t exist. We in Kadell help you to reach the best version of you, we want women to leave our salon with a better version of their true selves, believing that beauty starts from within, so let’s free ourselves from all the stereotypes and learn to love ourselves truly and fully.</p>
       </article>
     </div>
   </div>
@@ -148,7 +147,7 @@
   <div class="row">
     <div class="col-md-7 col-xs-12">
       <article>
-        <h6>Message From Kadell</h6>
+        <h6>A Message From Kadell</h6>
         <video id="kadell-video" width="640" height="480" autoplay controls>
           <source src="{% static 'videos/FKT.mp4' %}" type="video/mp4">
         </video>
@@ -280,7 +279,7 @@
 
 <!-- Let's start a project  -->
 
-<div class="letsproject-pan"> <a href="#">Let's start our journey</a> </div>
+<div class="letsproject-pan"> <a href="{% url 'services' %}">Let's start our journey</a> </div>
 
 <!-- Let's start a project  --> 
 
@@ -314,6 +313,10 @@
         </ul>
       </div>
       <p>&copy; 2022 Kadell.com. All Rights Reserved.</p>
+      <br>
+      <img src="{% static 'images/tamara-logo.png' %}" width="5%" height="5%">
+      <br>
+      <img src="{% static 'images/Tamara_Logo-EN.png' %}" width="5%" height="5%">
     </div>
   </div>
 </footer>

@@ -17,7 +17,7 @@ def service_details(request, service_title, service_id):
         if str(product.service) == service.title:
             service_products.append(product)
 
-    return render(request, 'services.html', {
+    return render(request, 'services-details.html', {
         'all_services': all_services,
         'service': service,
         'service_products': service_products

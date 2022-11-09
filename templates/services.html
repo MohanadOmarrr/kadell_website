@@ -85,7 +85,7 @@
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'services' %}">Services</a></li>
-          <li><a href="{% url 'place' %}">Place</a></li>
+          <li><a href="{% url 'place' %}">Location</a></li>
           <li><a href="{% url 'blog' %}">Blog</a></li>
           <li><a href="{% url 'contact' %}">Contact</a></li>
           <li><a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -102,7 +102,7 @@
   <!-- // banner Inner //-->
   
   <div class="header_inner_banner">
-    <figure> <img src="{% static 'images/service-banner.png' %}" alt="" style="height:100%; top:0;"/> </figure>
+    <figure> <img src="{% static 'images/service-banner.jpg' %}" alt="" style="height:100%; top:0;"/> </figure>
     <div class="header-title">
       <h2>Service</h2>
       <p>what we offer to customer</p>
@@ -125,13 +125,15 @@
         <a href="{% url 'services_details' service.title service.id %}">
           <div class="col-md-4 co-sm-6">
             <section>
-              <span>
-                <img src="{% static 'images/services-icon.png' %}"/>
-              </span>
-              <h3>{{ service.title }}</h3>
+                <img src="{{ service.image.url }}" width="256" height="253"/>
             </section>
           </div>
         </a>
+<!--      <div class="col-md-4 co-sm-6">-->
+<!--        <a href="{% url 'services_details' service.title service.id %">-->
+<!--          <img src="{{ service.image.url }}" width="256" height="253"/>-->
+<!--        </a>-->
+<!--      </div>-->
       {% endfor %}
 <!--      <div class="col-md-4 co-sm-6">-->
 <!--        <section> <span><i class="fa fa-diamond"></i></span>-->
@@ -298,6 +300,10 @@
         </ul>
       </div>
       <p>&copy; 2022 Kadell.com. All Rights Reserved.</p>
+      <br>
+      <img src="{% static 'images/tamara-logo.png' %}" width="5%" height="5%">
+      <br>
+      <img src="{% static 'images/Tamara_Logo-EN.png' %}" width="5%" height="5%">
     </div>
   </div>
 </footer>
