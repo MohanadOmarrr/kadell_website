@@ -132,7 +132,9 @@ USE_TZ = True
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "kadell_website/static"),
     os.path.join(BASE_DIR, "place/static"),
-    os.path.join(BASE_DIR, "cart/static")
+    os.path.join(BASE_DIR, "services/static"),
+    os.path.join(BASE_DIR, "contact/static"),
+    os.path.join(BASE_DIR, "cart/static"),
 ]
 
 STATIC_URL = "/static/"
