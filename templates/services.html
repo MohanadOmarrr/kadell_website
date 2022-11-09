@@ -123,42 +123,12 @@
     <div class="row">
       {% for service in all_services %}
         <a href="{% url 'services_details' service.title service.id %}">
-          <div class="col-md-4 co-sm-6">
+          <div class="col-lg-3 col-md-4 co-xs-6">
             <section>
                 <img src="{{ service.image.url }}" width="256" height="253"/>
             </section>
           </div>
         </a>
-<!--      <div class="col-md-4 co-sm-6">-->
-<!--        <a href="{% url 'services_details' service.title service.id %">-->
-<!--          <img src="{{ service.image.url }}" width="256" height="253"/>-->
-<!--        </a>-->
-<!--      </div>-->
-      {% endfor %}
-<!--      <div class="col-md-4 co-sm-6">-->
-<!--        <section> <span><i class="fa fa-diamond"></i></span>-->
-<!--          <h3>Digital experiences</h3>-->
-<!--          <p>Maecenas metus magna, condimentum eu <br/>-->
-<!--            elementum vitae, finibus eu mauris. Sus<br/>-->
-<!--            pendisse bibendum dlacus.</p>-->
-<!--        </section>-->
-<!--      </div>-->
-<!--      <div class="col-md-4 co-sm-6">-->
-<!--        <section> <span><i class="fa fa-lightbulb-o"></i></span>-->
-<!--          <h3>creative Ideas</h3>-->
-<!--          <p>Maecenas metus magna, condimentum eu <br/>-->
-<!--            elementum vitae, finibus eu mauris. Sus<br/>-->
-<!--            pendisse bibendum dlacus.</p>-->
-<!--        </section>-->
-<!--      </div>-->
-<!--      <div class="col-md-4 co-sm-6">-->
-<!--        <section> <span><i class="fa fa-paper-plane"></i></span>-->
-<!--          <h3>Brand Promotions</h3>-->
-<!--          <p>Maecenas metus magna, condimentum eu <br/>-->
-<!--            elementum vitae, finibus eu mauris. Sus<br/>-->
-<!--            pendisse bibendum dlacus.</p>-->
-<!--        </section>-->
-<!--      </div>-->
     </div>
   </div>
 </div>
