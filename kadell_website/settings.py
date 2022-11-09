@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'about',
     'contact',
     'place',
+    'cart',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -130,7 +131,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "kadell_website/static"),
-    os.path.join(BASE_DIR, "place/static")
+    os.path.join(BASE_DIR, "place/static"),
+    os.path.join(BASE_DIR, "cart/static")
 ]
 
 STATIC_URL = "/static/"

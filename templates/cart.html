@@ -19,7 +19,7 @@
 
 <!-- title -->
 
-<title>Kadell | Place</title>
+<title>Kadell |  Cart</title>
 
 <!-- title -->
 
@@ -36,7 +36,7 @@
 <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet" type="text/css" media="screen" >
 <link href="{% static 'css/animate.min.css' %}" rel="stylesheet" type="text/css" media="screen" >
 
-<link rel="stylesheet" href="{% static 'place-css/style.css' %}">
+<link href="{% static 'cart-static/style.css' %}" rel="stylesheet" type="text/css">
 
 <!--  add color theme -->
 
@@ -63,23 +63,22 @@
 
 <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
 
-<!--/.preloader-->
+<!--/.preloader--> 
 
 <!-- // header Start // -->
 
-<header class="header">
-
+<header class="header"> 
+  
   <!--// navbar //-->
-
+  
   <div class="navbar  navbar-static-top inner-nva-wrapper">
-    <div class="container">
-
+    <div class="container"> 
+      
       <!-- Logo -->
-
-      <h1> <a href="{% url 'home' %}" title="Kadell" > <img src="{% static 'images/' %}Kadell.png" alt="" title="Kadell" class="logo"/> <img src="{% static 'images/' %}Kadell.png" alt="" title="Kadell" class="logo_hove"/> </a> </h1>
-
-      <!-- Logo -->
-
+      <h1> <a href="{% url 'home' %}" title="Kadell" > <img src="{% static 'images/Kadell.png' %}" alt="" title="Kadell" class="logo"/> <img src="{% static 'images/' %}Kadell.png" alt="" title="Flexis" class="logo_hove"/> </a> </h1>
+      
+      <!-- Logo --> 
+      
       <!-- nav -->
 
       <nav class=" col-md-10 col-sm-10 nav navy">
@@ -95,113 +94,109 @@
       </nav>
 
       <!-- nav -->
-
+      
     </div>
   </div>
-
+  
   <!--// navbar //-->
 
-  <!-- // banner Inner //-->
+ <section class="h-100 products-section" style="background-color: #fff; padding: 130px;">
+  <div class="container h-100 py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-10">
 
-  <div class="header_inner_banner">
-    <figure> <img src="{% static 'images/contact-banner.png' %}" alt=""/> </figure>
-    <div class="header-title">
-      <h2>place</h2>
-      <p>showcase of latest works</p>
-    </div>
-    <div class="bg_overlay"></div>
-  </div>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-normal mb-0 text-black">Your Cart</h3>
+          <br>
+        </div>
 
-  <!-- // banner Inner //-->
+        {% if error %}
+          <h6>{{ error }}</h6>
+        {% endif %}
 
-</header>
+        {% for item in all_cart_items %}
+        <div class="card rounded-3 mb-4" style="margin: 30px 0">
+          <div class="card-body p-4">
+            <div class="row d-flex justify-content-between align-items-center">
+              <div class="col-md-2 col-lg-2 col-xl-2">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                  class="img-fluid rounded-3" alt="Cotton T-shirt">
+              </div>
+              <div class="col-md-3 col-lg-3 col-xl-3" style="padding-top: 4.3rem;">
+                <p class="lead fw-normal mb-2">{{ item.title }}</p>
+              </div>
+<!--              <div class="col-md-3 col-lg-3 col-xl-2 d-flex" style="padding-top: 2rem; padding-right: 4rem; ">-->
+<!--                <button class="btn btn-link px-2"-->
+<!--                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-->
+<!--                  <i class="fas fa-minus"></i>-->
+<!--                </button>-->
 
-<!-- // header End // -->
+<!--                <input id="form1" min="0" name="quantity" value="2" type="number"-->
+<!--                  class="form-control form-control-sm" />-->
 
-<!--// Works //-->
+<!--                <button class="btn btn-link px-2"-->
+<!--                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">-->
+<!--                  <i class="fas fa-plus"></i>-->
+<!--                </button>-->
+<!--              </div>-->
+              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1" style="padding-top: 4.5rem; ">
+                <h5 class="mb-0">SAR {{ item.prices }}</h5>
+              </div>
+              <div class="col-md-1 col-lg-1 col-xl-1 text-end" style="padding-top: 4.5rem; ">
+                <a href="{% url 'delete_item' item.id %}" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
 
-<!--<div>
-  <br>
-  <br>
-  <div class="carousel">
-    <ul class="slides">
-      <input type="radio" name="radio-buttons" id="img-1" checked />
-      <li class="slide-container">
-        <div class="slide-image">
-          <img src="{% static 'images/place-carousel-img1.JPG' %}" class="img-fluid">
+        <br>
+        <br>
+
+        <div class="card">
+          <div class="card-body">
+            <button type="button" class="btn btn-warning btn-block btn-lg" style="background-color: #0a5134; border: none;">Pay with Tamara</button>
+          </div>
         </div>
-        <div class="carousel-controls">
-          <label for="img-3" class="prev-slide">
-            <span>&lsaquo;</span>
-          </label>
-          <label for="img-2" class="next-slide">
-            <span>&rsaquo;</span>
-          </label>
-        </div>
-      </li>
-      <input type="radio" name="radio-buttons" id="img-2" />
-      <li class="slide-container">
-        <div class="slide-image">
-          <img src="{% static 'images/place-carousel-img2.JPG' %}" class="img-fluid">
-        </div>
-        <div class="carousel-controls">
-          <label for="img-1" class="prev-slide">
-            <span>&lsaquo;</span>
-          </label>
-          <label for="img-3" class="next-slide">
-            <span>&rsaquo;</span>
-          </label>
-        </div>
-      </li>
-      <input type="radio" name="radio-buttons" id="img-3" />
-      <li class="slide-container">
-        <div class="slide-image">
-          <img src="{% static 'images/place-carousel-img3.JPG' %}" class="img-fluid">
-        </div>
-        <div class="carousel-controls">
-          <label for="img-2" class="prev-slide">
-            <span>&lsaquo;</span>
-          </label>
-          <label for="img-1" class="next-slide">
-            <span>&rsaquo;</span>
-          </label>
-        </div>
-      </li>
-      <div class="carousel-dots">
-        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
-        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+
       </div>
-    </ul>
+    </div>
   </div>
-  <br>
-  <br>
-</div>-->
+</section>
+  
+<!--  &lt;!&ndash; // banner Inner //-->
+<!--  -->
+<!--  <div class="header_inner_banner">-->
+<!--    <figure> <img src="{% static 'images/test.jpg' %}" alt=""/> </figure>-->
+<!--    <div class="header-title">-->
+<!--      <h2>place</h2>-->
+<!--      <p>showcase of latest works</p>-->
+<!--    </div>-->
+<!--    <div class="bg_overlay"></div>-->
+<!--  </div>-->
+<!--  -->
+<!--   // banner Inner // -->
+<!--  -->
+<!--</header>-->
 
-<div class="carousel">
-    <input type="radio" name="slider" id="item-1" checked>
-    <input type="radio" name="slider" id="item-2">
-    <input type="radio" name="slider" id="item-3">
-  <div class="cards">
-    <label class="card" for="item-1" id="song-1">
-      <img src="{% static 'images/place-carousel-img1.JPG' %}" alt="song">
-    </label>
-    <label class="card" for="item-2" id="song-2">
-      <img src="{% static 'images/place-carousel-img2.JPG' %}" alt="song">
-    </label>
-    <label class="card" for="item-3" id="song-3">
-      <img src="{% static 'images/place-carousel-img3.JPG' %}" alt="song">
-    </label>
-  </div>
-</div>
+<!-- // header End //  -->
 
 <!--// Works //-->
 
+<!--<div class="works_wrapper">-->
+
+<!--  -->
+
+<!--</div>-->
+
+<!--// Works //&ndash;&gt;-->
+
 <!-- Let's start a project  -->
 
-<div class="letsproject-pan"> <a href="{% url 'contact' %}">Visit us</a> </div>
+<div class="letsproject-pan"> <a href="#">Let's start a project </a> </div>
 
-<!-- Let's start a project  -->
+<!-- Let's start a project  --> 
 
 <!--// footer //-->
 
@@ -211,20 +206,20 @@
       <div  class="col-md-5 col-sm-6">
         <address>
         <figure><img src="{% static 'images/Kadell.png' %}" alt="" title="Kadell"/></figure>
-        Yaqoot St, Ash Shati Ash Sharqi, Dammam, Saudi Arabia.<br/>
-         <a href="wecare@kadell-sa.com" target="_blank">wecare@kadell-sa.com</a>
+        Collins Street West Victoria 8007 Australia.<br/>
+        1800 1234 56789 / 98532100987 <a href="wecare@kadell-sa.com" target="_blank">wecare@kadell-sa.com</a>
         </address>
       </div>
-      <div  class="col-md-2 col-sm-3 col-xs-6">
+      <div  class="col-md-2 col-sm-3">
         <ul>
           <li><a href="{% url 'about' %}" title="About us">About us</a></li>
           <li><a href="{% url 'services' %}" title="Services">Services</a></li>
           <li><a href="{% url 'blog' %}" title="Blog">Blog</a></li>
           <li><a href="{% url 'contact' %}" title="Contact">Contact</a></li>
-          <li><a href="{% url 'place' %}" title="Place">Place</a></li>
+          <li><a href="#" title="Place">Place</a></li>
         </ul>
       </div>
-      <div  class="col-md-3 col-sm-3 col-xs-6">
+      <div  class="col-md-3 col-sm-3">
         <ul class="socil-icon-one">
           <li><a href="https://www.facebook.com/kadell.sa" title="Facebook">Facebook</a></li>
           <li><a href="https://www.instagram.com/kadell.sa/" title="Instagram">Instagram</a></li>
@@ -237,17 +232,17 @@
   </div>
 </footer>
 
-<!--// footer //-->
+<!--// footer //--> 
 
-<!-- Javascript File  -->
+<!-- Javascript File  --> 
 
-<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>--> 
 
 <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
 
-<!--for header jquery-->
+<!--for header jquery--> 
 
 <script src="{% static 'js/jquery.superslides.js' %}" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" src="{% static 'js/nav.js' %}"></script>
@@ -256,9 +251,9 @@
 
     var dropdown=new TINY.dropdown.init("dropdown", {id:'menu', active:'menuhover'});
 
-    </script>
+    </script> 
 
-<!--for header jquery-->
+<!--for header jquery--> 
 
 <script type="text/javascript" src="{% static 'js/jquery.imageScroll.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/countto.js' %}"></script>
@@ -268,8 +263,6 @@
 <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/html5shiv.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/back-to-top.js' %}"></script>
-
-<script type="text/javascript" src="{% static 'place-css/script.js' %}"></script>
 
 
 
