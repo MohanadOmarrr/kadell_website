@@ -1712,6 +1712,10 @@ body > div.the-history.container > div {
     color: black;
 }
 
+.all-serivices section img{
+    margin: auto;
+}
+
 .services-text a:hover {
     background-color: #aac4d2;
 }
