@@ -100,9 +100,6 @@
 
   <div class="header_inner_banner">
     <figure> <img src="{{ service.banner.url }}" alt="" style="height:100%; top:0;"/> </figure>
-    <div class="header-title">
-      <h2>{{ service.title }}</h2>
-    </div>
   </div>
 
   <!-- // banner Inner //-->
@@ -146,13 +143,6 @@
                     <a href="{% url 'add_to_cart' product.id %}" class="service-products-btn">add to cart</a>
                   </div>
                 </div>
-<!--                <br>-->
-<!--                <h6>{{ product.title }}</h6>-->
-<!--                <br>-->
-<!--                <p> SAR {{ product.prices }}</p>-->
-<!--                <a href="{% url 'add_to_cart' product.id %}" class="service-products-btn">add to cart</a>-->
-<!--                <br>-->
-<!--                <br>-->
                 <hr>
               </div>
             {% endfor %}
@@ -160,7 +150,7 @@
           </div>
         </div>
       </div>
-    </div>>
+    </div>
       </div>
     </div>
     <div class="clearfix"></div>
