@@ -479,6 +479,10 @@ text-align: center;
  .header .angle-down {
  bottom:20px
 }
+ .header_inner_banner .header-title h2 {
+ font-size:17px;
+ line-height:7px
+}
 }
 
 /* xs */

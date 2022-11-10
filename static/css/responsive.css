@@ -162,7 +162,6 @@ display:block
  .header nav {
  float:none
 }
-
  .header nav ul {
  width:100%;
  background-color: #0a5134;
@@ -225,6 +224,7 @@ display:block
 }
  .header .header_v1 figure figcaption h2 {
 font-size:24px;
+letter-spacing:5px
 }
  #home-image img {
 height:auto !important;
@@ -421,7 +421,7 @@ width:100% !important
  text-align:center
 }
  .header .inner-nva-wrapper {
- background-color: #fff;
+ background-color: #aac4d2;
  top:-91px;
  padding-bottom:10px
 }
@@ -440,6 +440,7 @@ width:100% !important
  .about_pan_home > article p, .service_details p, .service_details p + p, .testimonial_pan article p, .all-serivices section p, .services-text article h4, .services-text article p, .blog_left article p, .blog-details-pan .comments article .comment-body p, .commingsoon-content p {
  font-size:16px;
  line-height:24px;
+ letter-spacing:2px
 }
  .commingsoon-content h2 {
 letter-spacing:1px;
@@ -477,6 +478,10 @@ text-align: center;
 @media (max-width: 568px) {
  .header .angle-down {
  bottom:20px
+}
+ .header_inner_banner .header-title h2 {
+ font-size:17px;
+ line-height:7px
 }
 }
 

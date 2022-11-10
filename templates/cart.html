@@ -100,103 +100,104 @@
 
   <!--// navbar //-->
 
- <section class="h-100 products-section" style="background-color: #f0f0f0; padding: 130px;">
-  <div class="container h-100 py-5">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-10">
-
-        <div class="d-flex justify-content-between align-items-center mb-4">
-          <h3 class="fw-normal mb-0 text-black">Your Cart</h3>
-          <br>
-        </div>
-
-        {% if error %}
-          <h6>{{ error }}</h6>
-        {% endif %}
-
-        {% for item in all_cart_items %}
-        <div class="card rounded-3 mb-4" style="margin: 30px 0">
-          <div class="card-body p-4">
-            <div class="row d-flex justify-content-between align-items-center" style="background-color: #fff; border-radius: 50px;">
-              <div class="col-md-2 col-lg-2 col-xl-2">
-                <img
-                  src="{{ item.image.url }}"
-                  class="img-fluid rounded-3" alt="Cotton T-shirt" style="border-radius: 50px;">
-              </div>
-              <div class="col-md-3 col-lg-3 col-xl-3" style="padding-top: 4.3rem;">
-                <p class="lead fw-normal mb-2">{{ item.title }}</p>
-              </div>
-<!--              <div class="col-md-3 col-lg-3 col-xl-2 d-flex" style="padding-top: 2rem; padding-right: 4rem; ">-->
-<!--                <button class="btn btn-link px-2"-->
-<!--                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-->
-<!--                  <i class="fas fa-minus"></i>-->
-<!--                </button>-->
-
-<!--                <input id="form1" min="0" name="quantity" value="2" type="number"-->
-<!--                  class="form-control form-control-sm" />-->
-
-<!--                <button class="btn btn-link px-2"-->
-<!--                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">-->
-<!--                  <i class="fas fa-plus"></i>-->
-<!--                </button>-->
-<!--              </div>-->
-              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1" style="padding-top: 4.5rem; ">
-                <h5 class="mb-0">SAR {{ item.prices }}</h5>
-              </div>
-              <div class="col-md-1 col-lg-1 col-xl-1 text-end" style="padding-top: 4.5rem; ">
-                <a href="{% url 'delete_item' item.id %}" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-
-        <br>
-        <br>
-
-        <div class="card">
-          <div class="card-body">
-            <a href="https://tamara.co/en/index.html" target="_blank"><button type="button" class="btn btn-warning btn-block btn-lg" style="background-color: #0a5134; border: none;">Pay with Tamara</button></a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--  &lt;!&ndash; // banner Inner //-->
-<!--  -->
-<!--  <div class="header_inner_banner">-->
-<!--    <figure> <img src="{% static 'images/test.jpg' %}" alt=""/> </figure>-->
-<!--    <div class="header-title">-->
-<!--      <h2>place</h2>-->
-<!--      <p>showcase of latest works</p>-->
-<!--    </div>-->
-<!--    <div class="bg_overlay"></div>-->
-<!--  </div>-->
-<!--  -->
-<!--   // banner Inner // -->
-<!--  -->
-<!--</header>-->
+</header>
 
 <!-- // header End //  -->
 
 <!--// Works //-->
 
-<!--<div class="works_wrapper">-->
+<!--<section class="h-100 products-section" style="background-color: #f0f0f0; padding: 130px;">-->
+<!--  <div class="container h-100 py-5">-->
+<!--    <div class="row d-flex justify-content-center align-items-center h-100">-->
+<!--      <div class="col-10">-->
 
-<!--  -->
+<!--        <div class="d-flex justify-content-between align-items-center mb-4">-->
+<!--          <h3 class="fw-normal mb-0 text-black">Your Cart</h3>-->
+<!--          <br>-->
+<!--        </div>-->
 
-<!--</div>-->
+<!--        {% if error %}-->
+<!--          <h6>{{ error }}</h6>-->
+<!--        {% endif %}-->
 
-<!--// Works //&ndash;&gt;-->
+<!--        {% for item in all_cart_items %}-->
+<!--        <div class="card rounded-3 mb-4" style="margin: 30px 0">-->
+<!--          <div class="card-body p-4">-->
+<!--            <div class="row d-flex justify-content-between align-items-center" style="background-color: #fff; border-radius: 50px;">-->
+<!--              <div class="col-md-2 col-lg-2 col-xl-2">-->
+<!--                <img-->
+<!--                  src="{{ item.image.url }}"-->
+<!--                  class="img-fluid rounded-3" alt="Cotton T-shirt" style="border-radius: 50px;">-->
+<!--              </div>-->
+<!--              <div class="col-md-3 col-lg-3 col-xl-3" style="padding-top: 4.3rem;">-->
+<!--                <p class="lead fw-normal mb-2">{{ item.title }}</p>-->
+<!--              </div>-->
+<!--              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1" style="padding-top: 4.5rem; ">-->
+<!--                <h5 class="mb-0">SAR {{ item.prices }}</h5>-->
+<!--              </div>-->
+<!--              <div class="col-md-1 col-lg-1 col-xl-1 text-end" style="padding-top: 4.5rem; ">-->
+<!--                <a href="{% url 'delete_item' item.id %}" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
 
-<!-- Let's start a project  -->
+<!--        <br>-->
+<!--        <br>-->
 
-<!--<div class="letsproject-pan"> <a href="#">Let's start a project </a> </div>-->
+<!--        <div class="card">-->
+<!--          <div class="card-body">-->
+<!--            <a href="https://tamara.co/en/index.html" target="_blank"><button type="button" class="btn btn-warning btn-block btn-lg" style="background-color: #0a5134; border: none;">Pay with Tamara</button></a>-->
+<!--          </div>-->
+<!--        </div>-->
 
-<!-- Let's start a project  -->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<!-- Cart -->
+
+<div class="container jumbtron" style="padding: 10%" align="center">
+  <h3>Cart</h3>
+  <br>
+  <hr>
+  <br>
+  {% for item in all_cart_items %}
+  <div class="row" style="background-color: #fff; ">
+
+    <div class="col-lg-4 col-md-4 col-xs-4">
+        <img src="{{ item.image.url }}" alt="Cotton T-shirt" style="padding-top:10%; padding-bottom: 10%; " width="50%" height="50%">
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-4" style="margin: auto; padding-top:10%; padding-bottom: 10%;">
+        <h3>{{ item.title }}</h3>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-4" style="padding-top:10%; padding-bottom: 10%;">
+        <h5 class="mb-0">SAR {{ item.prices }}</h5>
+    </div>
+
+    <div class="col-lg-2 col-md-4 col-xs-4" style="padding-top:10%; padding-bottom: 10%;">
+        <a href="{% url 'delete_item' item.id %}" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+    </div>
+
+  </div>
+  {% endfor %}
+
+  <br>
+  <br>
+
+
+  <a href="https://tamara.co/en/index.html" target="_blank" class="button-service">Pay With Tamara</a>
+  <!--<a href="https://tamara.co/en/index.html" target="_blank"><button type="button" class="btn btn-warning btn-block btn-lg" style="background-color: #0a5134; border: none;">Pay with Tamara</button></a>-->
+
+</div>
+
+<!-- End Cart -->
+
 
 <!--// footer //-->
 
@@ -227,11 +228,15 @@
           <li><a href="https://twitter.com/kadellsa?s=11&t=MMzJyS2kdEwYE_2MkIApOg" title="Twitter">Twitter</a></li>
         </ul>
       </div>
+      <br>
       <p>&copy; 2022 Kadell.com. All Rights Reserved.</p>
       <br>
-      <img src="{% static 'images/tamara-logo.png' %}" width="5%" height="5%">
       <br>
-      <img src="{% static 'images/Tamara_Logo-EN.png' %}" width="5%" height="5%">
+      <div class="container">
+      <img src="{% static 'images/tamara-logo.png' %}" width="10%" height="10%">
+        <br>
+      <img src="{% static 'images/Tamara_Logo-EN.png' %}" width="10%" height="10%">
+      </div>
     </div>
   </div>
 </footer>
